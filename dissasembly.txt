@@ -1,0 +1,23 @@
+0000000000001129 <sum>:
+    1129:	55                   	push   ebp
+    112a:	48                   	dec    eax
+    112b:	89 e5                	mov    ebp,esp
+    112d:	89 7d fc             	mov    DWORD PTR [ebp-0x4],edi
+    1130:	89 75 f8             	mov    DWORD PTR [ebp-0x8],esi
+    1133:	8b 55 fc             	mov    edx,DWORD PTR [ebp-0x4]
+    1136:	8b 45 f8             	mov    eax,DWORD PTR [ebp-0x8]
+    1139:	01 d0                	add    eax,edx
+    113b:	5d                   	pop    ebp
+    113c:	c3                   	ret
+
+000000000000113d <main>:
+    113d:	55                   	push   ebp
+    113e:	48                   	dec    eax
+    113f:	89 e5                	mov    ebp,esp
+    1141:	be 01 00 00 00       	mov    esi,0x1
+    1146:	bf 05 00 00 00       	mov    edi,0x5
+    114b:	e8 d9 ff ff ff       	call   1129 <sum>
+    1150:	b8 00 00 00 00       	mov    eax,0x0
+    1155:	5d                   	pop    ebp
+    1156:	c3                   	ret
+

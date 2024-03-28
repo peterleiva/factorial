@@ -1,8 +1,5 @@
 global _start, _sum
 
-section .data
-    buf db "Hello, World!", 0xa
-
 section .text
 
 _start:
